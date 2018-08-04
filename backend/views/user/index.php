@@ -36,7 +36,7 @@
       <ul class="search_content clearfix">
        <li><label class="l_f">管理员名称</label><input name="" type="text"  class="text_add" placeholder=""  style=" width:400px"/></li>
        <li><label class="l_f">添加时间</label><input class="inline laydate-icon" id="start" style=" margin-left:10px;"></li>
-       <li style="width:90px;"><button type="button" class="btn_search"><i class="fa fa-search"></i>查询</button></li>
+       <li style="width:90px;"><button type="button" onclick  class="btn_search"><i class="fa fa-search"></i>查询</button></li>
       </ul>
     </div>
     <!--操作-->
@@ -192,6 +192,9 @@
 </body>
 </html>
 <script type="text/javascript">
+   
+
+
   function username(){
   	  alert(13213);
   }
@@ -207,6 +210,8 @@
    function email(){
   	  alert(13213);
   }
+  
+
 
   function  Submission(){
   	 var username =   $("input[name='username']").val();
