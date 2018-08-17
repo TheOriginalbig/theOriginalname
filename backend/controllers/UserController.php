@@ -22,6 +22,10 @@ class UserController extends Controller
      */
     public function actionIndex()
     {
+        $search = Yii::$app->request->post();
+        $get = Yii::$app->request->get();
+        // if ( $search ){}
+        // print_r($search);die;
         $page = Yii::$app->request->get('page') ? Yii::$app->request->get('page') : 1 ;
     	$user = new User;
     	$data = $user->index($page);

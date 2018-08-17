@@ -59,7 +59,7 @@ class User extends Model
         $pagesize = '10';
         $limit = ($page-1)*$pagesize;
         $total = ceil($num/$pagesize);
-    	$command = Yii::$app->db->createCommand('SELECT username,phone,email,status,createtime,sex FROM sc_user order by id desc limit '. $limit . ' , ' . $pagesize  );  
+    	$command = Yii::$app->db->createCommand('SELECT username,phone,email,createtime,sex,userclass FROM sc_user order by id desc limit '. $limit . ' , ' . $pagesize  );  
         $data = $command->queryAll();
     	$re = [
             'data' => $data,
@@ -74,10 +74,11 @@ class User extends Model
     public function add($post)
     {
     	$arr['username'] = $post['username'];
-    	$arr['userpassword'] = $post['userpassword'];
+    	$arr['userpassword'] = md5($post['userpassword'].'bhsj');
     	$arr['phone'] = $post['usertel'];
     	$arr['email'] = $post['email'];
-    	$arr['sex'] = $post['sex'];
+        $arr['sex'] = $post['sex'];
+    	$arr['userclass'] = $post['userclass'];
     	$arr['createtime'] = strtotime(date("Y-m-d"));
         return Yii::$app->db->createCommand()->insert('sc_user', $arr)->execute();
     }

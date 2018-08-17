@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>网站后台管理系统1</title>
+		<title>智慧汽车后台管理系统</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="backend/assets/css/bootstrap.min.css" rel="stylesheet" />
 		<link rel="stylesheet" href="backend/assets/css/font-awesome.min.css" />
@@ -395,15 +395,15 @@ function link_operating(name,title){
                    <li>
 				   <a href="#" class="dropdown-toggle"><i class="icon-credit-card"></i><span class="menu-text"> 车辆管理 </span><b class="arrow icon-angle-down"></b></a>
 				     <ul class="submenu">
-						<li class="home"><a href="javascript:void(0)" name="Cover_management.html" title="账户管理" class="iframeurl"><i class="icon-double-angle-right"></i>账户管理</a></li>
-						 <li class="home"><a href="javascript:void(0)" name="payment_method.html" title="支付方式" class="iframeurl"><i class="icon-double-angle-right"></i>支付方式</a></li>
+						<li class="home"><a href="javascript:void(0)" name="Cover_management.html" title="账户管理" class="iframeurl"><i class="icon-double-angle-right"></i>车辆管理</a></li>
+						 <li class="home"><a href="javascript:void(0)" name="index.php?r=vehigory/index" title="支付方式" class="iframeurl"><i class="icon-double-angle-right"></i>车辆分类管理</a></li>
 						  <li class="home"><a href="javascript:void(0)" name="Payment_Configure.html" title="支付配置" class="iframeurl"><i class="icon-double-angle-right"></i>支付配置</a></li>
 							</ul>
 						</li>
                   <li>
 					<a href="#" class="dropdown-toggle"><i class="icon-desktop"></i><span class="menu-text"> 试题库管理 </span><b class="arrow icon-angle-down"></b></a>
                     <ul class="submenu">
-                    <li class="home"><a href="javascript:void(0)" name="user_list.html" title="会员列表"  class="iframeurl"><i class="icon-double-angle-right"></i>会员列表</a></li>
+                    <li class="home"><a href="javascript:void(0)" name="user_list.html" title="会员列表"  class="iframeurl"><i class="icon-double-angle-right"></i>试题库管理</a></li>
                     <li class="home"><a href="javascript:void(0)" name="member-Grading.html" title="等级管理"  class="iframeurl"><i class="icon-double-angle-right"></i>等级管理</a></li>
                     <li class="home"><a href="javascript:void(0)" name="integration.html" title="会员记录管理"  class="iframeurl"><i class="icon-double-angle-right"></i>会员记录管理</a></li>
 
@@ -411,25 +411,25 @@ function link_operating(name,title){
 				  </li>
 				  <li><a href="#" class="dropdown-toggle"><i class="icon-laptop"></i><span class="menu-text"> 设备管理 </span><b class="arrow icon-angle-down"></b></a>
 							<ul class="submenu">
-								<li class="home"><a href="javascript:void(0)" name="Shop_list.html" title="店铺列表" class="iframeurl"><i class="icon-double-angle-right"></i>店铺列表</a></li>
-                                <li class="home"><a href="javascript:void(0)" name="Shops_Audit.html" title="店铺审核" class="iframeurl"><i class="icon-double-angle-right"></i>店铺审核<span class="badge badge-danger">5</span></a></li>
+								<li class="home"><a href="javascript:void(0)" name="Shop_list.html" title="店铺列表" class="iframeurl"><i class="icon-double-angle-right"></i>设备管理</a></li>
+                                <li class="home"><a href="javascript:void(0)" name="index.php?r=equgory/index" title="设备分类管理" class="iframeurl"><i class="icon-double-angle-right"></i>设备分类管理</a></li>
 							</ul>
 						</li>
-						<li><a href="#" class="dropdown-toggle"><i class="icon-comments-alt"></i><span class="menu-text"> 消息管理 </span><b class="arrow icon-angle-down"></b></a>
+						<li><a href="#" class="dropdown-toggle"><i class="icon-comments-alt"></i><span class="menu-text"> 课程管理 </span><b class="arrow icon-angle-down"></b></a>
 							<ul class="submenu">
-								<li class="home"><a href="javascript:void(0)" name="Guestbook.html" title="留言列表" class="iframeurl"><i class="icon-double-angle-right"></i>留言列表</a></li>
-                                <li class="home"><a href="javascript:void(0)" name="Feedback.html" title="意见反馈" class="iframeurl"><i class="icon-double-angle-right"></i>意见反馈</a></li>
+								<li class="home"><a href="javascript:void(0)" name="Guestbook.html" title="留言列表" class="iframeurl"><i class="icon-double-angle-right"></i>课程管理</a></li>
+                                <li class="home"><a href="javascript:void(0)" name="index.php?r=currigory/index" title="课程分类管理" class="iframeurl"><i class="icon-double-angle-right"></i>课程分类管理</a></li>
 							</ul>
 						</li>
-						<li><a href="#" class="dropdown-toggle"><i class="icon-bookmark"></i><span class="menu-text"> 文章管理 </span><b class="arrow icon-angle-down"></b></a>
+						<li><a href="#" class="dropdown-toggle"><i class="icon-bookmark"></i><span class="menu-text"> 工具管理 </span><b class="arrow icon-angle-down"></b></a>
 							<ul class="submenu">
-								<li class="home"><a href="javascript:void(0)" name="article_list.html" title="文章列表" class="iframeurl"><i class="icon-double-angle-right"></i>文章列表</a></li>
-                                <li class="home"><a href="javascript:void(0)" name="article_Sort.html" title="分类管理" class="iframeurl"><i class="icon-double-angle-right"></i>分类管理</a></li>
+								<li class="home"><a href="javascript:void(0)" name="index.php?r=tool/index" title="工具管理" class="iframeurl"><i class="icon-double-angle-right"></i>工具管理</a></li>
+                                <li class="home"><a href="javascript:void(0)" name="index.php?r=toolgory/index" title="工具分类管理" class="iframeurl"><i class="icon-double-angle-right"></i>工具分类管理</a></li>
 							</ul>
 						</li>
                         	<li><a href="#" class="dropdown-toggle"><i class="icon-cogs"></i><span class="menu-text"> 系统管理 </span><b class="arrow icon-angle-down"></b></a>
 							<ul class="submenu">
-								<li class="home"><a href="javascript:void(0)" name="Systems.html" title="系统设置" class="iframeurl"><i class="icon-double-angle-right"></i>系统设置</a></li>
+								<li class="home"><a href="javascript:void(0)" name="index.php?r=apichart/index" title="app轮播图设置" class="iframeurl"><i class="icon-double-angle-right"></i>app轮播图设置</a></li>
 								<li class="home"><a href="javascript:void(0)" name="System_section.html" title="系统栏目管理" class="iframeurl"><i class="icon-double-angle-right"></i>系统栏目管理</a></li>
 							
                                 <li class="home"><a href="javascript:void(0)" name="System_Logs.html" title="系统日志" class="iframeurl"><i class="icon-double-angle-right"></i>系统日志</a></li>
@@ -529,14 +529,14 @@ function link_operating(name,title){
        
          <div class="footer_style" id="footerstyle">  
 		 <script type="text/javascript">try{ace.settings.check('footerstyle' , 'fixed')}catch(e){}</script>
-          <p class="l_f">版权所有：南京四美软件  苏ICP备11011739号</p>
-          <p class="r_f">地址：南京市鼓楼区阅江楼街道公共路64号  更多模板：<a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>
+          <p class="l_f">欢迎光临</p>
+          <p class="r_f">欢迎你进入后台管理系统<a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>
          </div>
          <!--修改密码样式-->
          <div class="change_Pass_style" id="change_Pass">
             <ul class="xg_style">
              <li><label class="label_name">原&nbsp;&nbsp;密&nbsp;码</label><input name="原密码" type="password" class="" id="password"></li>
-             <li><label class="label_name">新&nbsp;&nbsp;密&nbsp;码</label><input name="新密码" type="password" class="" id="Nes_pas"></li>
+             <li><label class="label_name">新&nbsp;&nbsp;密&			;码</label><input name="新密码" type="password" class="" id="Nes_pas"></li>
              <li><label class="label_name">确认密码</label><input name="再次确认密码" type="password" class="" id="c_mew_pas"></li>              
             </ul>          
          </div>

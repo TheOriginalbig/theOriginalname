@@ -34,9 +34,11 @@
     <div class="search_style">
      
       <ul class="search_content clearfix">
-       <li><label class="l_f">管理员名称</label><input name="" type="text"  class="text_add" placeholder=""  style=" width:400px"/></li>
-       <li><label class="l_f">添加时间</label><input class="inline laydate-icon" id="start" style=" margin-left:10px;"></li>
-       <li style="width:90px;"><button type="button" onclick  class="btn_search"><i class="fa fa-search"></i>查询</button></li>
+        <form action="index.php?r=user/index" id="seachform" method="post">
+           <li><label class="l_f">管理员名称</label><input name="username" type="text"  class="text_add" placeholder=""  style=" width:400px"/></li>
+           <li><label class="l_f">添加时间</label><input class="inline laydate-icon" id="start" name="createtime" style=" margin-left:10px;"></li>
+           <li style="width:90px;"><button type="button" onClick="search()"  class="btn_search"><i class="fa fa-search"></i>查询</button></li>
+        </form>
       </ul>
     </div>
     <!--操作-->
@@ -79,7 +81,7 @@
         <th width="100px">邮箱</th>
                 <th width="100px">角色</th>       
         <th width="180px">加入时间</th>
-        <th width="70px">状态</th>                
+        <th width="70px">班级</th>                
         <th width="200px">操作</th>
       </tr>
     </thead>
@@ -93,13 +95,9 @@
       <td><?=$v['email']?></td>
       <td></td>
       <td><?=date("Y-m-d",$v['createtime'])?></td>
-      <td class="td-status"><span class="label label-success radius"><?=Yii::t('common','usertatus'.$v['status']);?></span></td>
+      <td class="td-status"><?=$v['userclass']?></td>
       <td class="td-manage">
-      	<?php if ( $v['status'] == 1 ){?>
-        <a onClick="member_stop(this,'10001')"  href="javascript:;" title="停用"  class="btn btn-xs btn-success"> 停用 </a>  
-       <?php }else {?>
-       	<a onClick="member_stop(this,'10001')"  href="javascript:;" title="停用"  class="btn btn-xs btn-success"> 启用 </a>
-       <?php }?>
+ 
         <a title="编辑" onclick="member_edit('编辑','member-add.html','4','','510')" href="javascript:;"  class="btn btn-xs btn-info" >编辑</a>       
         <a title="删除" href="javascript:;"  onclick="member_del(this,'1')" class="btn btn-xs btn-warning" >删除</a>
        </td>
@@ -131,7 +129,7 @@
     <div class="form-group">
       <label class="form-label"><span class="c-red">*</span>管理员：</label>
       <div class="formControls">
-        <input type="text" class="input-text" value="" placeholder="" id="username" name="username" datatype="*2-16" nullmsg="用户名不能为空"   onblur ="username()">
+        <input type="text" class="input-text"  placeholder="" id="username" name="username" datatype="*2-16" value="" nullmsg="用户名不能为空"   onblur ="username()">
       </div>
       <div class="col-4"> <span class="Validform_checktip"></span></div>
     </div>
@@ -161,7 +159,7 @@
     <div class="form-group">
       <label class="form-label "><span class="c-red">*</span>手机：</label>
       <div class="formControls ">
-        <input type="text" class="input-text" value="" onblur ="usertel()" placeholder="" id="user-tel" name="usertel" datatype="m" nullmsg="手机不能为空">
+        <input type="text" class="input-text" value="" onblur ="usertel()" maxlength="11" placeholder="" id="user-tel" name="usertel" datatype="m" nullmsg="手机不能为空">
       </div>
       <div class="col-4"> <span class="Validform_checktip"></span></div>
     </div>
@@ -169,6 +167,13 @@
       <label class="form-label"><span class="c-red">*</span>邮箱：</label>
       <div class="formControls ">
         <input type="text" class="input-text" placeholder="@" name="email" onblur ="email()" id="email" datatype="e" nullmsg="请输入邮箱！">
+      </div>
+      <div class="col-4"> <span class="Validform_checktip"></span></div>
+    </div>
+    <div class="form-group">
+      <label class="form-label"><span class="c-red">*</span>班级：</label>
+      <div class="formControls ">
+        <input type="text" class="input-text" placeholder="班级" name="userclass" onblur ="userclass()" id="userclass" datatype="e" nullmsg="请输入班级！">
       </div>
       <div class="col-4"> <span class="Validform_checktip"></span></div>
     </div>
@@ -192,33 +197,37 @@
 </body>
 </html>
 <script type="text/javascript">
-   
+  // // 搜索
+  //  function search(){
+  //     $("#seachform").submit();
+  //  }
 
-
-  function username(){
-  	  alert(13213);
-  }
-  function userpassword(){
-  	  alert(13213);
-  }
-   function newpassword2(){
-  	  alert(13213);
-  }
-   function usertel(){
-  	  alert(13213);
-  }
-   function email(){
-  	  alert(13213);
-  }
+  // // 添加
+  // function username(){
+  // 	  alert(13213);
+  // }
+  // function userpassword(){
+  // 	  alert(13213);
+  // }
+  //  function newpassword2(){
+  // 	  alert(13213);
+  // }
+  //  function usertel(){
+  // 	  alert(13213);
+  // }
+  //  function email(){
+  // 	  alert(13213);
+  // }
   
 
 
   function  Submission(){
-  	 var username =   $("input[name='username']").val();
+  	 var username =   $("#username").val();
   	 var userpassword =   $("input[name='userpassword']").val();
   	 var newpassword2 =   $("input[name='newpassword2']").val();
   	 var usertel =   $("input[name='usertel']").val();
-  	 var email =   $("input[name='email']").val();
+     var email =   $("input[name='email']").val();
+  	 var userclass =   $("input[name='userclass']").val();
   	 var remarks =   $(".textarea").val();
 
      if ( username == false ){
@@ -236,9 +245,11 @@
      } else if ( email == false ) {
         layer.alert('邮箱不能为空', {icon: 5});
         return false;
-     } else if ( remarks == false ) {
-        layer.alert('备注不能为空', {icon: 5});
+     
+      } else if ( userclass == false ) {
+        layer.alert('班级', {icon: 5});
         return false;
+     
      } else {
         $("#form-admin-add").submit();
      }  
